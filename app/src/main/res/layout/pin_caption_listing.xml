@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_caption_listing"
+    style="@style/block"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/map_jtom_title_2"
+        style="@style/map_bubble_jtom_title"
+        android:textIsSelectable="false" />
+
+    <View
+        android:id="@+id/map_jtom_title_devider_2"
+        style="@style/map_bubble_jtom_title_devider" />
+
+    <RelativeLayout
+        android:id="@+id/map_listing_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/filter_item_selector"
+        android:clickable="true"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/map_earmark_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="desc_map_earmark_image"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/map_thumbnail_layout"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/block"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/map_thumbnail_layout"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+
+            <include layout="@layout/pin_caption_details" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/map_caption_community"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/map_caption_community_height"
+            android:layout_above="@+id/map_caption_address"
+            android:layout_marginLeft="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/map_bubble_text_size_m"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/map_caption_address"
+            style="@style/block"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/map_bubble_text_size_m"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/map_go_icon"
+            style="@style/map_bubble_icon"
+            android:contentDescription="desc_arrow_icon"
+            />
+
+        <ImageView
+            android:id="@+id/map_info_icon"
+            style="@style/map_bubble_icon"
+            android:contentDescription="desc_arrow_icon"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

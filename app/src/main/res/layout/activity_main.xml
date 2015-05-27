@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" tools:context=".MainActivity">
+
+    <include layout="@layout/map_pin_all"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="use template"
+        android:layout_marginTop="100dp"
+        android:onClick="onTemplateRun"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="run new rendering engine"
+        android:layout_marginTop="200dp"
+        android:onClick="onEngineRun"/>
+</RelativeLayout>

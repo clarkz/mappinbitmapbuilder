@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_caption_jtom"
+    style="@style/block"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/map_jtom_title_1"
+        style="@style/map_bubble_jtom_title"
+        android:textIsSelectable="false" />
+
+    <View
+        android:id="@+id/map_jtom_title_devider_1"
+        style="@style/map_bubble_jtom_title_devider" />
+
+    <RelativeLayout
+        android:id="@+id/map_jtom_details"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/map_caption_details_height"
+        android:background="@drawable/filter_item_selector"
+        android:clickable="true"
+        android:padding="2dp">
+
+        <!-- Use dip instead of sp for specifying text size to properly handle large system font setting -->
+
+        <TextView
+            style="@style/block"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/map_jtom_details_info_icon"
+            android:padding="2dp"
+            android:text="map_jtom_info"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@id/map_jtom_details_info_icon"
+            style="@style/map_bubble_icon"
+            android:contentDescription="desc_arrow_icon"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

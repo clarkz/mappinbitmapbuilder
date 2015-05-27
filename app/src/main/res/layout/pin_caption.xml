@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/wrap"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true">
+
+    <include
+        android:id="@+id/current_location_caption"
+        layout="@layout/pin_caption_current_location" />
+
+    <RelativeLayout
+        android:id="@+id/map_caption"
+        android:layout_width="@dimen/map_caption_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/current_location_caption">
+
+        <LinearLayout
+            android:id="@+id/map_listing_caption"
+            style="@style/block"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/map_bubble_background"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/map_caption_view_flipper"
+                style="@style/block">
+
+                <include layout="@layout/pin_caption_listing" />
+
+                <include layout="@layout/pin_caption_jtom" />
+            </ViewFlipper>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/map_caption_nubbie_height"
+            android:layout_below="@id/map_listing_caption"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/wrap"
+                android:layout_gravity="left"
+                android:contentDescription="text message"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

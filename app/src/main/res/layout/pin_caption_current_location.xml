@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="106dp"
+    android:layout_height="51dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/map_bubble_background"
+        android:padding="2dp">
+
+        <TextView
+            style="@style/fill"
+            android:ellipsize="end"
+            android:gravity="center_vertical|center_horizontal"
+            android:singleLine="true"
+            android:text="location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/listing_summary_medium_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/wrap"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="description"
+        />
+
+</RelativeLayout>
