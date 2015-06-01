@@ -5,17 +5,28 @@
     android:paddingTop="5dp"
     android:paddingBottom="5dp" tools:context=".MainActivity">
 
-    <include layout="@layout/map_pin_all"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:text="use template"
-        android:layout_marginTop="100dp"
-        android:onClick="onTemplateRun"/>
+        android:text="use background thread"
+        android:layout_marginTop="50dp"
+        android:onClick="onEngineRunOnBackground"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:text="run new rendering engine"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="90dp"
         android:onClick="onEngineRun"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="render bitmap one by one"
+        android:layout_marginTop="130dp"
+        android:onClick="onEngineRunOnBackgroundOneByOne"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/showing_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></LinearLayout>
 </RelativeLayout>

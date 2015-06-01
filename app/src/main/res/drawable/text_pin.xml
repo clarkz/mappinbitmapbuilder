@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/mappin_background"/>
+    <item android:id="@+id/tintable_portion" android:drawable="@drawable/mappin_inside"/>
+    <item android:id="@+id/text_placeholder" android:drawable="@android:color/transparent"/>
+</layer-list>
