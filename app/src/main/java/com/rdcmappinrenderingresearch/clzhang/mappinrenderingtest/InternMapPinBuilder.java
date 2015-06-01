@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -19,6 +18,8 @@ public class InternMapPinBuilder {
     private LayerDrawable mForsalePinDrawable = null;
     private LayerDrawable mOffmarketPinDrawable = null;
     private BitmapDrawable mRightCompoundImage;
+    private Drawable mTintablePortion = null;
+    private Drawable mForsaleTintablePortion = null;
 
     static public InternMapPinBuilder getBuilder(Context context) {
         return new InternMapPinBuilder(context);
@@ -30,6 +31,9 @@ public class InternMapPinBuilder {
         if(mForsalePinDrawable != null) return;
         mForsalePinDrawable = (LayerDrawable) context.getResources().getDrawable(R.drawable.text_pin, null);
         mOffmarketPinDrawable = (LayerDrawable) mContext.getResources().getDrawable(R.drawable.offmarket_pin, null);
+        mTintablePortion = mForsalePinDrawable.findDrawableByLayerId(R.id.tintable_portion);
+        mForsaleTintablePortion = mTintablePortion;
+        mTintablePortion.setColorFilter(Color.parseColor("#D92228"), PorterDuff.Mode.MULTIPLY);
     }
 
     private InternMapPinBuilder(Context context) {
@@ -47,10 +51,9 @@ public class InternMapPinBuilder {
     }
 
     public Bitmap getForsaleBitmapIcon(String text){
-        Drawable tintablePortion = mForsalePinDrawable.findDrawableByLayerId(R.id.tintable_portion);
-        tintablePortion.setColorFilter(Color.parseColor("#D92228"), PorterDuff.Mode.MULTIPLY);
         int compoundImagePaddingDp = 2;
-        Drawable content = createContent(mContext, text, compoundImagePaddingDp, mRightCompoundImage);
+//        Drawable content = createContent(mContext, text, compoundImagePaddingDp, mRightCompoundImage);
+        Drawable content = createContent(mContext, text, compoundImagePaddingDp, null);
         return createPin(mForsalePinDrawable, content);
     }
 

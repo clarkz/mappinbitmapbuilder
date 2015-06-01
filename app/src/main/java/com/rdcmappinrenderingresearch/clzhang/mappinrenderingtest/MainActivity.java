@@ -144,7 +144,10 @@ public class MainActivity extends Activity {
     public void onEngineRun(View v) {
         long start = new Date().getTime();
 //        showAllBitmaps(mPinBuilder.getBitmapArray(BITMAP_COUNT));
-        mPinBuilder.getBitmapArray(BITMAP_COUNT);
+//        mPinBuilder.getBitmapArray(BITMAP_COUNT);
+        for (int i = 0; i < BITMAP_COUNT; i++) {
+            mPinBuilder.getForsaleBitmapIcon(Integer.toString(i));
+        }
         String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
         showMessage(msg + ", onEngineRun");
         Log.d("onEngineRun", msg);
