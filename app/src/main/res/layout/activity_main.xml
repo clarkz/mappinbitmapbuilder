@@ -5,7 +5,9 @@
     android:paddingTop="5dp"
     android:paddingBottom="5dp" tools:context=".MainActivity">
 
-    <Button
+    <include layout="@layout/map_pin_all"/>
+
+    <!--Button
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:text="use background thread"
@@ -14,19 +16,38 @@
     <Button
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:text="run new rendering engine"
-        android:layout_marginTop="90dp"
-        android:onClick="onEngineRun"/>
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="40dp"
         android:text="render bitmap one by one"
         android:layout_marginTop="130dp"
-        android:onClick="onEngineRunOnBackgroundOneByOne"/>
+        android:onClick="onEngineRunOnBackgroundOneByOne"/-->
+
+    <TextView
+        android:id="@+id/output_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/showing_area"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></LinearLayout>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="use template"
+        android:layout_marginTop="40dp"
+        android:onClick="onTemplateRun"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="run previous rendering engine"
+        android:layout_marginTop="100dp"
+        android:onClick="onEngineRun4Previous"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="run new rendering engine"
+        android:layout_marginTop="150dp"
+        android:onClick="onEngineRun"/>
+
 </RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    	Note: text-size-in-dp
+    	Some text sizes are specified using dp instead of sp in order to properly handle large system font setting 
+    -->
+
+    <style name="map_bubble_icon" parent="wrap">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="map_bubble_single_line_text" parent="block">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="map_bubble_single_line_text.size_m">
+        <item name="android:textSize">@dimen/map_bubble_text_size_m</item>
+    </style>
+
+    <style name="map_bubble_single_line_text.size_xxl">
+        <item name="android:textSize">@dimen/map_bubble_text_size_xxl</item>
+    </style>
+
+    <style name="map_bubble_single_line_text.size_m.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="map_bubble_single_line_text.size_m.bold.command">
+        <item name="android:textColor">@color/textColor_innerCommand_text</item>
+    </style>
+
+    <style name="map_bubble_single_line_text.size_xs">
+        <item name="android:textSize">@dimen/map_bubble_text_size_xs</item>
+    </style>
+
+    <style name="map_bubble_single_line_text.size_xxs">
+        <item name="android:textSize">@dimen/map_bubble_text_size_xxs</item>
+    </style>
+
+    <style name="map_bubble_school_rating">
+        <item name="android:layout_height">93dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:background">@drawable/map_bubble_school_rating_bg</item>
+    </style>
+
+    <style name="map_bubble_school_action">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">163dp</item>
+        <item name="android:background">@drawable/map_bubble_school_button_bg</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="map_bubble_school_action.button">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/map_bubble_text_size_xl</item>
+        <item name="android:drawablePadding">-10dp</item>
+    </style>
+
+    <!-- See text-size-in-dp note above -->
+    <style name="map_bubble_jtom_title" parent="block">
+        <item name="android:background">@drawable/map_bubble_jtom_title_background</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize" tools:ignore="SpUsage">10dp</item>
+    </style>
+
+    <style name="map_bubble_jtom_title_devider">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/map_caption_jtom_title_devider_height</item>
+        <item name="android:background">@color/map_bubble_jtom_title_devider</item>
+    </style>
+
+    <!-- See text-size-in-dp note above -->
+    <style name="map_pin" parent="wrap">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="map_pin.basic" parent="map_pin">
+        <item name="android:background">@drawable/mappin_basic</item>
+    </style>
+
+</resources>

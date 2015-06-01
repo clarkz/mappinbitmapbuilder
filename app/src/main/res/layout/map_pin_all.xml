@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_pin_container"
+    style="@style/wrap"
+    android:orientation="vertical"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true">
+
+    <FrameLayout
+        android:id="@+id/map_pin_basic_container"
+        style="@style/wrap">
+
+        <TextView
+            android:id="@+id/basic_map_pin"
+            style="@style/map_pin.basic"
+            android:text="message" />
+    </FrameLayout>
+
+</LinearLayout>

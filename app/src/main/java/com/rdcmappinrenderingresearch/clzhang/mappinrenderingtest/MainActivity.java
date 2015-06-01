@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
     final private String LOG_MESSAGE = "Total time (in mls) ";
     final private int BITMAP_COUNT = 1000;
 
+    private MapPinBitmapBuilder mPreviousPinBuilder = null;
     private InternMapPinBuilder mPinBuilder = null;
     private NinePatchDrawable mBackground9Patch = null;
     private NinePatchDrawable mBackgroundTop9Patch = null;
@@ -40,7 +41,13 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
 
+        mPreviousPinBuilder = MapPinBitmapBuilder.getBuilder(getBaseContext());
         mPinBuilder = InternMapPinBuilder.getBuilder(getBaseContext());
+
+        mBackground9Patch = (NinePatchDrawable) getResources()
+                .getDrawable(R.drawable.mappin_basic, null);
+        mBackgroundTop9Patch = (NinePatchDrawable) getResources()
+                .getDrawable(R.drawable.mappin_basic_top, null);
     }
 
     @Override
@@ -101,17 +108,57 @@ public class MainActivity extends Activity {
         Log.d("RunOnBackgroundOneByOne", LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start));
     }
 
-    public void onEngineRun(View v) {
+    public void onTemplateRun(View v) {
+        TextView pinView = (TextView) findViewById(R.id.basic_map_pin);
+        pinView.setDrawingCacheEnabled(true);
+
         long start = new Date().getTime();
-        showAllBitmaps(mPinBuilder.getBitmapArray(BITMAP_COUNT));
-        Log.d("onEngineRun", LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start));
+
+        for (int i = 0; i < BITMAP_COUNT; i++) {
+            getBitmapFromTemplate(pinView, i + "");
+        }
+        String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
+        showMessage(msg);
+        Log.d("onTemplateRun", msg);
+
     }
 
+    private Bitmap getBitmapFromTemplate(TextView template, String text) {
+        template.setText(text);
+        template.requestLayout();
+
+        Bitmap bitmap = template.getDrawingCache(true);
+        return bitmap.copy(bitmap.getConfig(), true);
+    }
+
+    public void onEngineRun4Previous(View v){
+        long start = new Date().getTime();
+        for (int i = 0; i < BITMAP_COUNT; i++) {
+            getBitmapFromBuilder(Integer.toString(i));
+        }
+        String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
+        showMessage(msg);
+        Log.d("onEngineRun4Previous", msg);
+    }
+
+    public void onEngineRun(View v) {
+        long start = new Date().getTime();
+//        showAllBitmaps(mPinBuilder.getBitmapArray(BITMAP_COUNT));
+        mPinBuilder.getBitmapArray(BITMAP_COUNT);
+        String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
+        showMessage(msg);
+        Log.d("onEngineRun", msg);
+    }
     public void showBitmap(Bitmap pin){
         showBitmap(pin, null);
     }
 
-    public void showBitmap(Bitmap pin, LinearLayout imageDisplayArea){
+    private void showMessage(String msg){
+        TextView textview = (TextView)findViewById(R.id.output_message);
+        textview.setText(msg);
+
+    }
+    private void showBitmap(Bitmap pin, LinearLayout imageDisplayArea){
         if(imageDisplayArea == null) imageDisplayArea = (LinearLayout) findViewById(R.id.showing_area);
 
         ImageView image = new ImageView(this);
@@ -119,7 +166,7 @@ public class MainActivity extends Activity {
         imageDisplayArea.addView(image);
     }
 
-    public void showAllBitmaps(Bitmap[] bitmaps){
+    private void showAllBitmaps(Bitmap[] bitmaps){
         long start = new Date().getTime();
         LinearLayout imageDisplayArea = (LinearLayout) findViewById(R.id.showing_area);
         imageDisplayArea.removeAllViews();
@@ -130,4 +177,17 @@ public class MainActivity extends Activity {
         }
         Log.d("showAllBitmaps", LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start));
     }
+
+    private Bitmap getBitmapFromBuilder(String text) {
+        return mPreviousPinBuilder
+                .setBackgroundDrawable(mBackground9Patch)
+                .setBackgroundTopDrawable(mBackgroundTop9Patch)
+                .setBackgroundColor(Color.RED)
+                .setLeftIcon(null)
+                .setRightIcon(null)
+                .setText(text)
+                .getIcon();
+
+    }
+
 }

@@ -1,0 +1,139 @@
+<resources>
+
+    <color name="clear">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent_white">#88FFFFFF</color>
+    <color name="almost_white">#EEEEEE</color>
+    <color name="black">#000000</color>
+    <color name="black_alpha_60">#99000000</color>
+    <color name="grey_33pct">#555555</color>
+    <color name="darker_grey">#666666</color>
+    <color name="black_translucent">#64000000</color>
+    <color name="grey">#888888</color>
+    <color name="dark_grey">#9A9A9A</color>
+    <color name="medium_grey">#BBBBBB</color>
+
+    <color name="grey_100">#F7F7F7</color>
+    <color name="grey_200">#F8F8F8</color>
+    <color name="grey_300">#999999</color>
+    <color name="grey_300_26">#40999999</color>
+    <color name="grey_500">#707271</color>
+    <color name="grey_800">#333333</color>
+    <color name="grey_900">#222222</color>
+    <color name="red_500">#D92228</color>
+    <color name="red_400">#EA1525</color>
+    <color name="red_500_26">#40D92228</color>
+
+    <color name="primary">@color/red_500</color>
+    <color name="secondary">@color/grey_300</color>
+    <color name="text">@color/grey_800</color>
+    <color name="background">@color/white</color>
+    <color name="section_background">@color/grey_100</color>
+    <color name="separator">@color/grey_500</color>
+    <color name="controls">@color/grey_300</color>
+    <color name="cta_button">@color/primary</color>
+    <color name="cta_button_pressed">@color/red_400</color>
+    <color name="cta_button_disabled">@color/red_500_26</color>
+    <color name="pressed">@color/grey_300_26</color>
+    <color name="tertiary_button_border">@color/grey_300</color>
+    <color name="tertiary_button_background">@color/white</color>
+    <color name="tertiary_button_pressed">@color/grey_100</color>
+    <color name="actionbar_title">@color/grey_800</color>
+    <!-- Duped name to overwrite values from movecore -->
+    <color name="actionbar_background">@color/grey_100</color>
+    <color name="action_bar_background">@color/actionbar_background</color>
+    <color name="toolbar_popup_background">@color/grey_100</color>
+    <color name="actionbar_border">@color/grey_500</color>
+
+    <color name="price_text">@color/grey_800</color>
+    <color name="price_sold_text">@color/grey_800</color>
+
+    <color name="system_background">@color/white</color>
+
+    <color name="hyperlink">@color/primary</color>
+    <color name="map_draw_line">#8EC447</color>
+
+    <color name="showcase_yellow">#FFE59C</color>
+
+    <color name="lead_bg_light">#ffffff</color>
+
+    <color name="default_photo_count_bg">#BB333333</color>
+
+    <color name="photo_count_showcase_bg">#FFE59C</color>
+    <color name="photo_count_showcase_text">#333333</color>
+    <color name="photo_count_basic_bg">#666666</color>
+    <color name="photo_count_basic_text">#DDDDDD</color>
+
+    <color name="srp_cell_regular_text">#333333</color>
+    <color name="srp_cell_openhouse_background">#E6F2F4</color>
+
+    <color name="backgroundColor_conversation_rowHeader">#EFF2F4</color>
+
+    <color name="focused_end">#EE7600</color>
+
+    <color name="backgroundColor_ldp">@color/grey_100</color>
+
+    <color name="ldp_section_header_text">@color/text</color>
+    <color name="backgroundColor_ldp_overviewStrips">@color/grey_200</color>
+
+    <color name="divider_profile_one">#e1e1e1</color>
+
+    <color name="recent_activity_bottom_text">#a3a3a3</color>
+
+    <color name="agent_cancel_button">#D3E7F2</color>
+
+
+    <color name="ldp_price_and_photo_background">#cc222222</color>
+    <color name="ldp_detail_background">@color/grey_900</color>
+    <color name="ldp_gallery_background">@color/grey_900</color>
+
+    <color name="ldp_subsection_title">#AAAAAA</color>
+    <color name="ldp_section_bar">@color/grey_300</color>
+
+    <color name="real_estate_section_header_bottom_view_color">@color/grey_500</color>
+    <color name="real_estate_section_header_background">#222222</color>
+
+
+    <color name="map_bubble_showcase_photocount_background">#ffe59c</color>
+    <color name="map_bubble_background_color">#E6333333</color>
+    <!-- <color name="map_bubble_background_color">#E60C1D2E</color> -->
+    <color name="map_bubble_jtom_title_background">#999999</color>
+    <color name="map_bubble_jtom_title_devider">#68727e</color>
+
+    <color name="map_pin_school_searched_text">#EFA633</color>
+
+    <color name="no_recently_viewed_page_bg">#315174</color>
+
+
+    <!-- global -->
+    <color name="textColor_default">@color/text</color>
+    <color name="textColor_innerCommand_text">@color/primary</color>
+    <color name="textColor_hint_text_color">#AAAAAA</color>
+    <color name="textColor_value_label">#DBDBDB</color>
+
+    <color name="backgroundColor_number_count">@color/grey_900</color>
+
+    <!-- splash screen related  -->
+    <color name="textColor_splash_loading_text">@color/text</color>
+    <color name="splash_button_background">@color/background</color>
+
+    <color name="backgroundColor_homeScreen">@color/background</color>
+
+
+    <color name="backgroundColor_tabDivider_middle_color">@color/separator</color>
+
+    <!-- client info dialog -->
+    <color name="backgroundColor_dialog_dialogHeader">@color/section_background</color>
+
+    <!-- rebranded srp related  -->
+    <color name="background_color_srp_list_mutiple_listings_one_property_section">@color/grey_500</color>
+
+    <!-- Colors used for the dots at the bottom of Help & Tips page -->
+    <color name="help_tips_dot_unselected">@color/grey_500</color>
+    <color name="help_tips_dot_selected">@color/grey_300</color>
+    <color name="background_color_widget_header">@color/section_background</color>
+
+    <color name="spinner_popup_background">@color/grey_100</color>
+
+
+</resources>
