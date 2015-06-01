@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
             getBitmapFromTemplate(pinView, i + "");
         }
         String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
-        showMessage(msg);
+        showMessage(msg + ", onTemplateRun");
         Log.d("onTemplateRun", msg);
 
     }
@@ -137,7 +137,7 @@ public class MainActivity extends Activity {
             getBitmapFromBuilder(Integer.toString(i));
         }
         String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
-        showMessage(msg);
+        showMessage(msg + ", onEngineRun4Previous");
         Log.d("onEngineRun4Previous", msg);
     }
 
@@ -146,7 +146,7 @@ public class MainActivity extends Activity {
 //        showAllBitmaps(mPinBuilder.getBitmapArray(BITMAP_COUNT));
         mPinBuilder.getBitmapArray(BITMAP_COUNT);
         String msg = LOG_MESSAGE + "for " + BITMAP_COUNT + " records:" + (new Date().getTime() - start);
-        showMessage(msg);
+        showMessage(msg + ", onEngineRun");
         Log.d("onEngineRun", msg);
     }
     public void showBitmap(Bitmap pin){
