@@ -28,9 +28,10 @@ public class InternMapPinBuilder {
     private void initialize(Context context){
         mRightCompoundImage = (BitmapDrawable) context.getResources().getDrawable(R.drawable.arrow_tip_down, null);
         mRightCompoundImage.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
-        if(mForsalePinDrawable != null) return;
-        mForsalePinDrawable = (LayerDrawable) context.getResources().getDrawable(R.drawable.text_pin, null);
-        mOffmarketPinDrawable = (LayerDrawable) mContext.getResources().getDrawable(R.drawable.offmarket_pin, null);
+        if(context.getResources() != null) {
+            mForsalePinDrawable = (LayerDrawable) context.getResources().getDrawable(R.drawable.text_pin, null);
+            mOffmarketPinDrawable = (LayerDrawable) context.getResources().getDrawable(R.drawable.offmarket_pin, null);
+        }
         mTintablePortion = mForsalePinDrawable.findDrawableByLayerId(R.id.tintable_portion);
         mForsaleTintablePortion = mTintablePortion;
         mTintablePortion.setColorFilter(Color.parseColor("#D92228"), PorterDuff.Mode.MULTIPLY);
